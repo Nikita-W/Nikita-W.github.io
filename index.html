@@ -2,10 +2,113 @@
 <html>
     <head>
         <title>this is the title</title>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <h1>Hello World!</h1>
-        <p>I'm hosted with GitHub Pages</p>
+        <!-- START NAV -->
+<nav id="navbar">
+    <a href="#welcome-section">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <!-- END NAV -->
+  
+  <!-- START WELCOME -->
+  <section id="welcome-section">
+    <h1>Nikita Wagenman</h1>
+    <p>junior web developer</p>
+  </section>
+  <!-- END WELCOME -->
+      
+  <!-- START PROJECTS -->
+  <section id="projects">
+    
+    <h2>Projects</h2>
+    
+    <div class="project-grid">
+      <a class="project-tile"
+         target="_blank"
+         href="https://codepen.io/nervousniki/full/KKpgYzO">
+        <img class="project-img" src="https://media.discordapp.net/attachments/401822876111732737/702942765209747576/unknown.png?width=1055&height=781"
+             alt="dnd 5e preference survey" />
+        <p>Survey</p>
+      </a>
+      
+      <a class="project-tile"
+         target="_blank"
+         href="https://codepen.io/nervousniki/full/poJWggR">
+        <img class="project-img" src="https://media.discordapp.net/attachments/401822876111732737/702942859120214096/unknown.png?width=1053&height=781"
+             alt="dice bag product landing page" />
+        <p>Product Landing Page</p>
+      </a>
+      
+      <a class="project-tile"
+         target="_blank"
+         href="https://codepen.io/nervousniki/full/eYpdVJX">
+        <img class="project-img" src="https://media.discordapp.net/attachments/401822876111732737/702943339103780954/unknown.png?width=1043&height=781"
+             alt="html elements reference" />
+        <p>Technical Documentation</p>
+      </a>
+      
+      <a class="project-tile"
+         target="_blank"
+         href="https://codepen.io/nervousniki/full/YzXzWMG">
+        <img class="project-img" src="https://media.discordapp.net/attachments/401822876111732737/702943132467331082/unknown.png?width=937&height=702"
+             alt="Luigi Tribute Page" />
+        <p>Tribute Page</p>
+      </a>
+    </div>
+    <br>
+    
+    <a id="profile-link" href="https://codepen.io/nervousniki" target="_blank">Show All</a>
+  </section>
+  <!-- END PROJECTS -->
+      
+  <!-- START CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div>
+      <a>
+        <img 
+           id="github"
+           class="icon"
+           src="https://cdn.discordapp.com/attachments/401822876111732737/702939094434709614/github.png"
+           alt="github"
+           onmouseover="hover1(this)"
+           onmouseleave="unhover1(this)"
+        />
+      </a>
+      <a>
+        <img 
+           id="twitter"
+           class="icon"
+           src="https://cdn.discordapp.com/attachments/401822876111732737/702938811251818506/twitter.png"
+           alt="twitter"
+           onmouseover="hover2(this);"
+           onmouseout="unhover2(this);"
+        />
+      </a>
+      <a>
+        <img 
+           id="email"
+           class="icon"
+           src="https://cdn.discordapp.com/attachments/401822876111732737/702939334013353994/mail.png"
+           alt="email"
+           onmouseover="hover3(this);"
+           onmouseout="unhover3(this);"
+        />
+      </a>
+    </div>
+  </section>
+  <!-- END CONTACT -->
+      
+  <!-- START FOOTER -->
+  <footer>
+    <p>Icons made by Freepik from www.flaticon.com</p>
+    <br>
+    <p>Website &copy; 2020 Nikita Wagenman</p>
+  </footer>
+  <!-- END FOOTER -->
     </body>
 </html>
