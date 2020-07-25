@@ -28,7 +28,6 @@ body::before {
     rgba(12, 136, 140, .9), 
     rgba(0, 73, 109, .9)), 
     url("https://cdn.discordapp.com/attachments/401822876111732737/702567143652196476/s_aC8bC8cC8dC8e0f0g64h0C888C00496DiA7j0k32l116m116.png");
-  background-size: ;
   background-position: top;
   background-repeat: repeat;
 }
@@ -37,7 +36,6 @@ body::before {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-size: ;
   text-align: center;
 }
 
@@ -113,26 +111,27 @@ section p {
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-gap: 30px;
+  grid-template-rows: 3;
+  grid-gap: 2em;
   margin-bottom: 10px;
 }
 
 @media (max-width: 666px) {
   .project-grid {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 }
 
 .img-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 30px;
+    grid-template-rows: 1;
+    grid-gap: 2em;
     margin-bottom: 10px;
 }
 
-.project-tile, .img-tile {
+.project-tile {
   background: var(--teal);
   height: auto;
   border-radius: 5px;
@@ -142,6 +141,7 @@ section p {
 .project-tile:hover {
   background: var(--dark);
 }
+
 .project-tile p {
   color: white;
   margin: 10px;
@@ -158,6 +158,11 @@ section p {
   border-radius: 5px;
 }
 
+.art {
+    padding-bottom: .8em;
+}
+
+/*
 #profile-link {
   text-decoration: none;
   padding: 10px;
@@ -174,7 +179,6 @@ section p {
 
 /* CONTACT SECTION */
 #contact {
-  background: ;
   display: flex;
   flex-direction: column;
   height: 80vh;
@@ -197,7 +201,6 @@ section p {
 .icon:hover {
   background: var(--dark);
   border-radius: 50%;
-  transition: ;
 }
 
 /* FOOTER */
