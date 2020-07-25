@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poiret+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poiret+One&display=swap");
 
 /* VARIABLE COLORS */
 :root {
   --white: ;
-  --teal: #0C888C;
-  --blue: #00496D; /*rgba(0, 73, 109, .5)*/
-  --transblue: rgba(0, 25, 55, .5);
+  --teal: #0c888c;
+  --blue: #00496d; /*rgba(0, 73, 109, .5)*/
+  --transblue: rgba(0, 25, 55, 0.5);
   --dark: rgb(0, 25, 55);
-  
 }
 
 /* RESET + BACKGROUND */
@@ -17,7 +16,7 @@
 }
 
 body::before {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
@@ -25,10 +24,10 @@ body::before {
   width: 100%;
   z-index: -1;
   background-image: linear-gradient(
-    rgba(12, 136, 140, .9), 
-    rgba(0, 73, 109, .9)), 
+      rgba(12, 136, 140, 0.9),
+      rgba(0, 73, 109, 0.9)
+    ),
     url("https://cdn.discordapp.com/attachments/401822876111732737/702567143652196476/s_aC8bC8cC8dC8e0f0g64h0C888C00496DiA7j0k32l116m116.png");
-  background-size: ;
   background-position: top;
   background-repeat: repeat;
 }
@@ -36,13 +35,12 @@ body::before {
 /* BASE STYLES */
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  font-size: ;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
 }
 
 h1 {
-  font-family: 'Poiret One', sans-serif;
+  font-family: "Poiret One", sans-serif;
   font-size: min(max(30px, 8vw), 60px);
   color: white;
   margin-bottom: 10px;
@@ -50,7 +48,7 @@ h1 {
 
 h2 {
   font-size: min(max(25px, 6vw), 50px);
-  font-family: 'Poiret One', sans-serif;
+  font-family: "Poiret One", sans-serif;
   color: white;
   margin-bottom: 30px;
 }
@@ -86,7 +84,7 @@ a {
 #navbar a:hover {
   background: var(--dark);
   color: var(--teal);
-  transition: .25s;
+  transition: 0.25s;
 }
 
 /* WELCOME SECTION */
@@ -101,11 +99,17 @@ a {
 section p {
   color: var(--dark);
   font-size: 20px;
-  
 }
 
 /* PROJECTS SECTION */
-#projects {
+#gallery {
+  display: block;
+  height: 25px;
+  margin-top: ;
+  visibility: hidden;
+}
+
+#gallery-section {
   background: var(--blue);
   padding: 30px;
 }
@@ -113,27 +117,37 @@ section p {
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-gap: 30px;
+  grid-template-rows: 3;
+  grid-gap: 2em;
   margin-bottom: 10px;
 }
 
 @media (max-width: 666px) {
   .project-grid {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
+}
+
+.img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1;
+  grid-gap: 2em;
+  margin-bottom: 10px;
 }
 
 .project-tile {
   background: var(--teal);
   height: auto;
   border-radius: 5px;
-  transition: .25s;
+  transition: 0.25s;
 }
 
 .project-tile:hover {
   background: var(--dark);
 }
+
 .project-tile p {
   color: white;
   margin: 10px;
@@ -141,7 +155,7 @@ section p {
 
 .project-tile:hover p {
   color: var(--teal);
-  transition: .25s;
+  transition: 0.25s;
 }
 
 .project-img {
@@ -150,6 +164,11 @@ section p {
   border-radius: 5px;
 }
 
+.art {
+  padding-bottom: 0.8em;
+}
+
+/*
 #profile-link {
   text-decoration: none;
   padding: 10px;
@@ -166,30 +185,57 @@ section p {
 
 /* CONTACT SECTION */
 #contact {
-  background: ;
   display: flex;
   flex-direction: column;
   height: 80vh;
   justify-content: center;
 }
 
+#info {
+  background: grey;
+  padding: 1.5em;
+  border-radius: 5px;
+  margin: 5em auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+.info-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  text-align: left;
+} */
+
+.info-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+}
+
+.info-container p {
+  color: white;
+  font-size: min(max(20px, 3vw), 30px);
+}
+
 .icon {
-  margin: 15px;
+  margin: 0;
   padding: 10px;
   width: 15%;
   max-width: 75px;
   min-width: 50px;
   height: auto;
   border-radius: 50%;
-  -webkit-transition: all .25s ease-in-out;
-  -moz-transition: all .25s ease-in-out;
-  transition: all .25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 .icon:hover {
   background: var(--dark);
   border-radius: 50%;
-  transition: ;
 }
 
 /* FOOTER */
