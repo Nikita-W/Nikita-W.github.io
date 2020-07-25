@@ -124,7 +124,15 @@ section p {
   }
 }
 
-.project-tile {
+.img-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 30px;
+    margin-bottom: 10px;
+}
+
+.project-tile, .img-tile {
   background: var(--teal);
   height: auto;
   border-radius: 5px;
