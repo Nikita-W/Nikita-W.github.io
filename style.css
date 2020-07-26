@@ -188,11 +188,12 @@ a {
 }
 
 .info p {
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   font-size: min(max(1.25em, 4vw), 1.75em);
 }
 
 .icon {
+  opacity: 0.6;
   width: 15%;
   min-width: 3em;
   height: auto;
