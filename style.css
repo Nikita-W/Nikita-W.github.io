@@ -60,7 +60,7 @@ a {
 /* NAVIGATION */
 #navbar {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   background: var(--blue);
   padding: 1em 0em;
   text-align: right;
@@ -98,7 +98,6 @@ a {
 #welcome-section p {
   color: rgba(255, 255, 255, 0.6);
   font-size: 1.5em;
-  font-weight: ;
 }
 
 /* PROJECTS SECTION */
@@ -111,6 +110,7 @@ a {
 #gallery-section {
   background: var(--blue);
   padding: 30px;
+  min-height: 100vh;
 }
 
 .project-grid {
@@ -136,10 +136,6 @@ a {
 
   .img-grid {
     grid-gap: 1em;
-  }
-
-  #gallery-section {
-    width: ;
   }
 }
 
@@ -182,17 +178,9 @@ a {
   justify-content: center;
 }
 
-#info-container {
-  padding: 1.5em;
-  border-radius: 5px;
-  margin: 3em auto;
-  display: flex;
-  flex-direction: column;
-}
-
 .info {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   text-align: left;
   padding: 1em;
@@ -203,17 +191,12 @@ a {
   font-size: min(max(1.25em, 3vw), 2em);
 }
 
-@media only screen and (max-width: 666px) {
-  .info {
-    flex-direction: column;
-  }
-}
-
 .icon {
   width: 15%;
   max-width: 4rem;
   min-width: 3em;
   height: auto;
+  padding: 1em;
   border-radius: 30%;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -227,7 +210,6 @@ a {
 
 /* FOOTER */
 footer {
-  width: 100%;
   background: var(--dark);
   border-top: solid;
   padding: 2em;
