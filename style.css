@@ -40,13 +40,13 @@ body {
 
 h1 {
   font-family: "Poiret One", sans-serif;
-  font-size: min(max(2em, 8vw), 4em);
+  font-size: min(max(2.5em, 8vw), 4em);
   color: white;
   margin-bottom: 10px;
 }
 
 h2 {
-  font-size: min(max(25px, 6vw), 50px);
+  font-size: min(max(2em, 6vw), 3em);
   font-family: "Poiret One", sans-serif;
   color: white;
   margin-bottom: 30px;
@@ -179,21 +179,21 @@ a {
 }
 
 .info {
+  width: 75vw;
+  margin: 1em auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: left;
   padding: 1em;
 }
 
 .info p {
   color: white;
-  font-size: min(max(1.25em, 3vw), 2em);
+  font-size: min(max(1.25em, 4vw), 1.75em);
 }
 
 .icon {
   width: 15%;
-  max-width: 4rem;
   min-width: 3em;
   height: auto;
   padding: 1em;
