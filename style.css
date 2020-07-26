@@ -2,7 +2,6 @@
 
 /* VARIABLE COLORS */
 :root {
-  --white: ;
   --teal: #0c888c;
   --blue: #00496d; /*rgba(0, 73, 109, .5)*/
   --transblue: rgba(0, 25, 55, 0.5);
@@ -27,7 +26,7 @@ body::before {
       rgba(12, 136, 140, 0.9),
       rgba(0, 73, 109, 0.9)
     ),
-    url("https://cdn.discordapp.com/attachments/401822876111732737/702567143652196476/s_aC8bC8cC8dC8e0f0g64h0C888C00496DiA7j0k32l116m116.png");
+    url("assets/bg.png");
   background-position: top;
   background-repeat: repeat;
 }
@@ -41,7 +40,7 @@ body {
 
 h1 {
   font-family: "Poiret One", sans-serif;
-  font-size: min(max(30px, 8vw), 60px);
+  font-size: min(max(2em, 8vw), 4em);
   color: white;
   margin-bottom: 10px;
 }
@@ -67,7 +66,7 @@ a {
   text-align: right;
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   #navbar {
     text-align: center;
   }
@@ -96,16 +95,16 @@ a {
   height: 100vh;
 }
 
-section p {
-  color: var(--dark);
-  font-size: 20px;
+#welcome-section p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.5em;
+  font-weight: ;
 }
 
 /* PROJECTS SECTION */
 #gallery {
   display: block;
   height: 25px;
-  margin-top: ;
   visibility: hidden;
 }
 
@@ -117,16 +116,8 @@ section p {
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 3;
+  grid-template-rows: auto;
   grid-gap: 2em;
-  margin-bottom: 10px;
-}
-
-@media (max-width: 666px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
 }
 
 .img-grid {
@@ -135,6 +126,21 @@ section p {
   grid-template-rows: 1;
   grid-gap: 2em;
   margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 666px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+  }
+
+  .img-grid {
+    grid-gap: 1em;
+  }
+
+  #gallery-section {
+    width: ;
+  }
 }
 
 .project-tile {
@@ -168,66 +174,47 @@ section p {
   padding-bottom: 0.8em;
 }
 
-/*
-#profile-link {
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
-  background: var(--teal);
-  color: white;
-}
-
-#profile-link:hover {
-  background: var(--dark);
-  color: var(--teal);
-  transition: .25s;
-}
-
 /* CONTACT SECTION */
 #contact {
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 100vh;
   justify-content: center;
 }
 
-#info {
-  background: grey;
+#info-container {
   padding: 1.5em;
   border-radius: 5px;
-  margin: 5em auto;
+  margin: 3em auto;
   display: flex;
   flex-direction: column;
 }
 
-/*
-.info-container {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  align-items: center;
-  text-align: left;
-} */
-
-.info-container {
+.info {
   display: flex;
   flex-direction: row;
   align-items: center;
   text-align: left;
+  padding: 1em;
 }
 
-.info-container p {
+.info p {
   color: white;
-  font-size: min(max(20px, 3vw), 30px);
+  font-size: min(max(1.25em, 3vw), 2em);
+}
+
+@media only screen and (max-width: 666px) {
+  .info {
+    flex-direction: column;
+  }
 }
 
 .icon {
-  margin: 0;
-  padding: 10px;
   width: 15%;
-  max-width: 75px;
-  min-width: 50px;
+  max-width: 4rem;
+  min-width: 3em;
   height: auto;
-  border-radius: 50%;
+  border-radius: 30%;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
@@ -235,11 +222,12 @@ section p {
 
 .icon:hover {
   background: var(--dark);
-  border-radius: 50%;
+  border-radius: 20%;
 }
 
 /* FOOTER */
 footer {
+  width: 100%;
   background: var(--dark);
   border-top: solid;
   padding: 2em;
