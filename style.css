@@ -2,7 +2,6 @@
 
 /* VARIABLE COLORS */
 :root {
-  --white: ;
   --teal: #0c888c;
   --blue: #00496d; /*rgba(0, 73, 109, .5)*/
   --transblue: rgba(0, 25, 55, 0.5);
@@ -27,7 +26,7 @@ body::before {
       rgba(12, 136, 140, 0.9),
       rgba(0, 73, 109, 0.9)
     ),
-    url("https://cdn.discordapp.com/attachments/401822876111732737/702567143652196476/s_aC8bC8cC8dC8e0f0g64h0C888C00496DiA7j0k32l116m116.png");
+    url("assets/bg.png");
   background-position: top;
   background-repeat: repeat;
 }
@@ -41,13 +40,13 @@ body {
 
 h1 {
   font-family: "Poiret One", sans-serif;
-  font-size: min(max(30px, 8vw), 60px);
+  font-size: min(max(2.5em, 8vw), 4em);
   color: white;
   margin-bottom: 10px;
 }
 
 h2 {
-  font-size: min(max(25px, 6vw), 50px);
+  font-size: min(max(2em, 6vw), 3em);
   font-family: "Poiret One", sans-serif;
   color: white;
   margin-bottom: 30px;
@@ -61,13 +60,13 @@ a {
 /* NAVIGATION */
 #navbar {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   background: var(--blue);
   padding: 1em 0em;
   text-align: right;
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   #navbar {
     text-align: center;
   }
@@ -96,37 +95,29 @@ a {
   height: 100vh;
 }
 
-section p {
-  color: var(--dark);
-  font-size: 20px;
+#welcome-section p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.5em;
 }
 
 /* PROJECTS SECTION */
 #gallery {
   display: block;
   height: 25px;
-  margin-top: ;
   visibility: hidden;
 }
 
 #gallery-section {
   background: var(--blue);
   padding: 30px;
+  min-height: 100vh;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 3;
+  grid-template-rows: auto;
   grid-gap: 2em;
-  margin-bottom: 10px;
-}
-
-@media (max-width: 666px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
 }
 
 .img-grid {
@@ -135,6 +126,17 @@ section p {
   grid-template-rows: 1;
   grid-gap: 2em;
   margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 666px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+  }
+
+  .img-grid {
+    grid-gap: 1em;
+  }
 }
 
 .project-tile {
@@ -168,66 +170,35 @@ section p {
   padding-bottom: 0.8em;
 }
 
-/*
-#profile-link {
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
-  background: var(--teal);
-  color: white;
-}
-
-#profile-link:hover {
-  background: var(--dark);
-  color: var(--teal);
-  transition: .25s;
-}
-
 /* CONTACT SECTION */
 #contact {
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 100vh;
   justify-content: center;
 }
 
-#info {
-  background: grey;
-  padding: 1.5em;
-  border-radius: 5px;
-  margin: 5em auto;
+.info {
+  width: 75vw;
+  margin: 1em auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 1em;
 }
 
-/*
-.info-container {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  align-items: center;
-  text-align: left;
-} */
-
-.info-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-align: left;
-}
-
-.info-container p {
-  color: white;
-  font-size: min(max(20px, 3vw), 30px);
+.info p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: min(max(1.25em, 4vw), 1.75em);
 }
 
 .icon {
-  margin: 0;
-  padding: 10px;
+  opacity: 0.6;
   width: 15%;
-  max-width: 75px;
-  min-width: 50px;
+  min-width: 3em;
   height: auto;
-  border-radius: 50%;
+  padding: 1em;
+  border-radius: 30%;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
@@ -235,7 +206,7 @@ section p {
 
 .icon:hover {
   background: var(--dark);
-  border-radius: 50%;
+  border-radius: 20%;
 }
 
 /* FOOTER */
