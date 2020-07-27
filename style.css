@@ -63,7 +63,7 @@ a {
   width: 100vw;
   background: var(--blue);
   padding: 1em 0em;
-  text-align: right;
+  text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
@@ -111,7 +111,7 @@ a {
 #gallery-section {
   background: var(--blue);
   padding: 30px;
-  min-height: 100vh;
+  min-height: 92vh;
 }
 
 .project-grid {
@@ -129,7 +129,7 @@ a {
   margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 666px) {
+@media only screen and (max-width: 800px) {
   .project-grid {
     grid-template-columns: 1fr;
     grid-gap: 1em;
@@ -192,22 +192,10 @@ a {
   color: rgba(255, 255, 255, 0.9);
   font-size: min(max(1.25em, 4vw), 1.75em);
 }
-
-.icon {
-  opacity: 0.6;
-  width: 15%;
-  min-width: 3em;
-  height: auto;
-  padding: 1em;
-  border-radius: 30%;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-}
-
-.icon:hover {
-  background: var(--dark);
-  border-radius: 20%;
+#at {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: min(max(3em, 8vw), 5em);
+  margin-bottom: 1em;
 }
 
 /* FOOTER */
@@ -215,6 +203,5 @@ footer {
   background: var(--dark);
   border-top: solid;
   padding: 2em;
-  text-align: right;
   color: var(--teal);
 }
